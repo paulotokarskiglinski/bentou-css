@@ -1,6 +1,6 @@
 # Bentou CSS
 
-A lightweight, minimal, and modern CSS library inspired by Vercel and Apple's design aesthetics.
+A lightweight, minimal, and modern CSS library.
 
 ## Features
 
