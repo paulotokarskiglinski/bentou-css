@@ -1,0 +1,20 @@
+{
+  "name": "bentou-css",
+  "version": "1.0.0",
+  "description": "A lightweight, minimal, and modern CSS library with dark mode support",
+  "main": "dist/bentou.css",
+  "style": "dist/bentou.css",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "css",
+    "framework",
+    "minimal",
+    "dark-mode",
+    "responsive",
+    "modern"
+  ],
+  "author": "",
+  "license": "MIT"
+}

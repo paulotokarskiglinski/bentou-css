@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bentou CSS - Demo</title>
+  <link rel="stylesheet" href="bentou.css">
+  <style>
+    /* Additional demo-specific styles */
+    .demo-section {
+      margin: var(--space-2xl) 0;
+    }
+    
+    .demo-section:first-child {
+      margin-top: 0;
+    }
+    
+    .demo-title {
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .hero {
+      text-align: center;
+      padding: var(--space-2xl) 0;
+    }
+    
+    .hero h1 {
+      margin-bottom: var(--space-md);
+    }
+    
+    .hero p {
+      font-size: var(--font-size-lg);
+      max-width: 600px;
+      margin: 0 auto var(--space-xl);
+    }
+    
+    .feature-icon {
+      font-size: var(--font-size-3xl);
+      margin-bottom: var(--space-md);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-brand">Bentou <span class="text-accent">CSS</span></div>
+    <ul class="nav-links">
+      <li><a href="#components">Components</a></li>
+      <li><a href="#docs">Docs</a></li>
+      <li><a href="#github">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container">
+    <div class="hero">
+      <h1>Bentou <span class="text-accent">CSS</span></h1>
+      <p>A lightweight, minimal, and modern CSS library. Built with best practices, supporting dark mode out of the box.</p>
+      <div class="flex justify-center gap-md">
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn">Documentation</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Typography Section -->
+    <section class="demo-section">
+      <div class="demo-title">Typography</div>
+      
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      
+      <p>This is a paragraph with some <strong>bold text</strong> and some <em>italic text</em>. It demonstrates the default text styling with proper line height and spacing.</p>
+      
+      <p>Here's a <a href="#">link example</a> and some <code>inline code</code>.</p>
+      
+      <pre><code>// Code block example
+function hello() {
+  console.log('Hello, Bentou!');
+}</code></pre>
+      
+      <blockquote>
+        "Design is not just what it looks like and feels like. Design is how it works." - Steve Jobs
+      </blockquote>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="demo-section">
+      <div class="demo-title">Buttons</div>
+      
+      <div class="flex gap-md flex-wrap">
+        <button class="btn">Default Button</button>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-accent">Accent Button</button>
+        <button class="btn" disabled>Disabled Button</button>
+        <button class="btn btn-accent" disabled>Disabled Accent Button</button>
+      </div>
+      
+      <div class="flex gap-md flex-wrap mt-lg">
+        <button class="btn btn-sm">Small Button</button>
+        <button class="btn">Medium Button</button>
+        <button class="btn btn-lg">Large Button</button>
+      </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="demo-section">
+      <div class="demo-title">Badges</div>
+
+      <h1>Heading 1 <span class="badge">Default</span></h1>
+      <h2>Heading 2 <span class="badge">Default</span></h2>
+      <h3>Heading 3 <span class="badge">Default</span></h3>
+      <h4>Heading 4 <span class="badge">Default</span></h4>
+      <h5>Heading 5 <span class="badge">Default</span></h5>
+      <h6>Heading 6 <span class="badge">Default</span></h6>
+      
+      <h3 class="mb-md">Color Variants</h3>
+      <div class="flex gap-md flex-wrap mb-xl">
+        <span class="badge">Default</span>
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-accent">Accent</span>
+        <span class="badge badge-success">Success</span>
+        <span class="badge badge-error">Error</span>
+        <span class="badge badge-warning">Warning</span>
+        <span class="badge badge-outline">Outline</span>
+      </div>
+      
+      <h3 class="mb-md">Pill Badges</h3>
+      <div class="flex gap-md flex-wrap mb-xl">
+        <span class="badge badge-pill">Default</span>
+        <span class="badge badge-primary badge-pill">Primary</span>
+        <span class="badge badge-accent badge-pill">Accent</span>
+        <span class="badge badge-success badge-pill">Success</span>
+        <span class="badge badge-error badge-pill">Error</span>
+        <span class="badge badge-warning badge-pill">Warning</span>
+      </div>
+      
+      <h3 class="mb-md">Sizes</h3>
+      <div class="flex gap-md items-center flex-wrap mb-xl">
+        <span class="badge badge-accent">Regular Badge</span>
+        <span class="badge badge-accent badge-lg">Large Badge</span>
+      </div>
+      
+      <h3 class="mb-md">In Context</h3>
+      <div class="flex gap-lg flex-wrap">
+        <button class="btn btn-primary">
+          Notifications <span class="badge" style="margin-left: 0.5rem;">4</span>
+        </button>
+        
+        <h4>
+          Profile <span class="badge badge-accent badge-pill">New</span>
+        </h4>
+        
+        <p>
+          This feature is <span class="badge badge-success">Available</span> in all plans.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="demo-section">
+      <div class="demo-title">Cards</div>
+      
+      <div class="grid grid-cols-3">
+        <div class="card">
+          <div class="feature-icon">⚡</div>
+          <div class="card-title">Lightning Fast</div>
+          <div class="card-text">
+            Minimal CSS means faster load times and better performance for your users.
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon">🎨</div>
+          <div class="card-title">Beautiful Design</div>
+          <div class="card-text">
+            Clean, modern aesthetics inspired by industry leaders like Vercel and Apple.
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="feature-icon">🌓</div>
+          <div class="card-title">Dark Mode</div>
+          <div class="card-text">
+            Automatic dark mode support based on system preferences. No JavaScript required.
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-hover mt-lg">
+          <div class="feature-icon">👋</div>
+        <div class="card-title">User Interaction</div>
+        <div class="card-subtitle">Hover me!</div>
+        <div class="card-text">This is an example of a card with a hover effect.</div>
+      </div>
+
+      <div class="card card-hover mt-lg">
+        <div class="card-title">Card with Footer</div>
+        <div class="card-subtitle">Customizable options</div>
+        <div class="card-text">
+          This is an example of a card with a footer section. Perfect for actions or additional information.
+        </div>
+        <div class="card-footer">
+          <div class="flex justify-between items-center">
+            <small>Last updated: 2 mins ago</small>
+            <button class="btn btn-sm btn-primary">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section class="demo-section">
+      <div class="demo-title">Forms</div>
+      
+      <div class="grid grid-cols-2">
+        <div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+          </div>
+          
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country">
+              <option>United States</option>
+              <option>United Kingdom</option>
+              <option>Canada</option>
+              <option>Australia</option>
+            </select>
+          </div>
+        </div>
+        
+        <div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your message here..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <h4>Checkboxes</h4>
+            <div class="form-check">
+              <input type="checkbox" id="subscribe" checked />
+              <label for="subscribe">Subscribe to newsletter</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="terms" />
+              <label for="terms">I accept the terms and conditions</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="disabled-check" disabled />
+              <label for="disabled-check">Disabled option</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <h4>Radio Buttons</h4>
+            <div class="form-check">
+              <input type="radio" id="option1" name="options" checked />
+              <label for="option1">Option 1</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="option2" name="options" />
+              <label for="option2">Option 2</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="option3" name="options" disabled />
+              <label for="option3">Disabled option</label>
+            </div>
+          </div>
+          
+          <button class="btn btn-primary w-full">Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- List Group Section -->
+    <section class="demo-section">
+      <div class="demo-title">List Groups</div>
+      
+      <h3>Basic List</h3>
+      <ul class="list-group mb-xl">
+        <li class="list-group-item">First item</li>
+        <li class="list-group-item">Second item</li>
+        <li class="list-group-item">Third item</li>
+        <li class="list-group-item">Fourth item</li>
+        <li class="list-group-item">Fifth item</li>
+      </ul>
+
+      <h3>Active and Disabled</h3>
+      <ul class="list-group mb-xl">
+        <li class="list-group-item active">Active item</li>
+        <li class="list-group-item">Regular item</li>
+        <li class="list-group-item disabled">Disabled item</li>
+        <li class="list-group-item">Another item</li>
+      </ul>
+      
+      <h3>Link Items</h3>
+      <div class="list-group mb-xl">
+        <a href="#" class="list-group-item active">Active link</a>
+        <a href="#" class="list-group-item">Link item</a>
+        <a href="#" class="list-group-item">Another link</a>
+        <a href="#" class="list-group-item disabled">Disabled link</a>
+      </div>
+      
+      <h3>With Badges</h3>
+      <ul class="list-group mb-xl">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Notifications
+          <span class="badge badge-primary badge-pill">+99</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Messages
+          <span class="badge badge-accent badge-pill">5</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Updates
+          <span class="badge badge-success badge-pill">1</span>
+        </li>
+      </ul>
+      
+      <h3>Contextual Classes</h3>
+      <ul class="list-group mb-xl">
+        <li class="list-group-item">Default item</li>
+        <li class="list-group-item list-group-item-primary">Primary item</li>
+        <li class="list-group-item list-group-item-accent">Accent item</li>
+        <li class="list-group-item list-group-item-success">Success item</li>
+        <li class="list-group-item list-group-item-error">Error item</li>
+        <li class="list-group-item list-group-item-warning">Warning item</li>
+      </ul>
+      
+      <div class="grid grid-cols-2">
+        <div>
+          <h3>Flush Variant</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">First item</li>
+            <li class="list-group-item">Second item</li>
+            <li class="list-group-item">Third item</li>
+            <li class="list-group-item">Fourth item</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="mb-md">Horizontal</h3>
+          <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">Item 2</li>
+            <li class="list-group-item">Item 3</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Layout Section -->
+    <section class="demo-section">
+      <div class="demo-title">Layout & Grid</div>
+      
+      <h3 class="mb-md">Flexbox Example</h3>
+      <div class="flex justify-between items-center p-lg bg-secondary mb-xl">
+        <div>Left aligned content</div>
+        <div>Center content</div>
+        <div>Right aligned content</div>
+      </div>
+      
+      <h3 class="mb-md">Grid System</h3>
+      <div class="grid grid-cols-4 mb-md">
+        <div class="p-lg bg-secondary text-center">1</div>
+        <div class="p-lg bg-secondary text-center">2</div>
+        <div class="p-lg bg-secondary text-center">3</div>
+        <div class="p-lg bg-secondary text-center">4</div>
+      </div>
+      
+      <div class="grid grid-cols-3 mb-md">
+        <div class="p-lg bg-secondary text-center">1</div>
+        <div class="p-lg bg-secondary text-center">2</div>
+        <div class="p-lg bg-secondary text-center">3</div>
+      </div>
+      
+      <div class="grid grid-cols-2">
+        <div class="p-lg bg-secondary text-center">1</div>
+        <div class="p-lg bg-secondary text-center">2</div>
+      </div>
+    </section>
+
+    <!-- Colors & Theme Section -->
+    <section class="demo-section">
+      <div class="demo-title">Colors & Theme</div>
+      
+      <p>Try switching your system theme to see the automatic dark mode in action!</p>
+      
+      <div class="grid grid-cols-4 mt-lg">
+        <div class="p-xl bg-secondary text-center">
+          <div class="text-sm text-secondary mb-sm">Background</div>
+          <div class="font-mono text-xs">--bg-secondary</div>
+        </div>
+        <div class="p-xl bg-tertiary text-center">
+          <div class="text-sm text-secondary mb-sm">Background Alt</div>
+          <div class="font-mono text-xs">--bg-tertiary</div>
+        </div>
+        <div class="p-xl text-center shadow-md">
+          <div class="text-sm text-secondary mb-sm">Shadow</div>
+          <div class="font-mono text-xs">--shadow-md</div>
+        </div>
+        <div class="p-xl text-center" style="background-color: var(--accent-primary); color: white;">
+          <div class="text-sm mb-sm" style="opacity: 0.9;">Accent</div>
+          <div class="font-mono text-xs">--accent-primary</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center p-xl mt-2xl" style="border-top: 1px solid var(--border-color);">
+    <p class="text-secondary">Built with Bentou CSS</p>
+    <small class="text-tertiary">Lightweight, Minimal, Modern</small>
+  </footer>
+
+</body>
+</html>
